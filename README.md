@@ -1,4 +1,4 @@
-# login_ui
+# Catalog App
 
 A new Flutter project.
 
