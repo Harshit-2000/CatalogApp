@@ -11,12 +11,13 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.deepPurple),
+                margin: EdgeInsets.zero,
                 accountName: Text("Harshit"),
                 accountEmail: Text("harshit@gmail.com"),
                 currentAccountPicture: CircleAvatar(
@@ -35,6 +36,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushNamed(context, MyRoutes.homeRoute);
             },
           ),
+          Divider(),
           ListTile(
             leading: Icon(
               CupertinoIcons.profile_circled,
@@ -44,6 +46,7 @@ class MyDrawer extends StatelessWidget {
               textScaleFactor: 1.2,
             ),
           ),
+          Divider(),
           ListTile(
             leading: Icon(
               CupertinoIcons.mail,
@@ -53,6 +56,7 @@ class MyDrawer extends StatelessWidget {
               textScaleFactor: 1.2,
             ),
           ),
+          Divider(),
         ],
       ),
     );

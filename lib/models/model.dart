@@ -1,5 +1,5 @@
 class CatalogModel {
-  static List<Item> ?items;
+  static List<Item>? items;
 }
 
 class Item {
@@ -9,6 +9,7 @@ class Item {
   final num price;
   final String color;
   final String image;
+  bool inCart;
 
   Item(
       {required this.id,
@@ -16,7 +17,8 @@ class Item {
       required this.desc,
       required this.price,
       required this.color,
-      required this.image});
+      required this.image,
+      this.inCart = false});
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
